@@ -1,5 +1,5 @@
 html, body {
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 100%;
 	margin: 0;
 	padding: 0;
@@ -19,6 +19,14 @@ header {
 	align-items: center;
 	padding: 1em 2.4em;
 }
+.logo {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.5em;
+	font-family: 'Roboto Condensed';
+	font-weight: 800;
+	text-transform: uppercase;
+}
 #navigation {
 	width: 25%;
 }
@@ -34,6 +42,61 @@ header {
 	list-style-type: none;
 }
 .nav-links li a {
+	color: #333333;
+	font-family: 'Roboto Condensed';
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: capitalize;
+}
+#main {
+	width: 1024px;
+	margin: auto;
+}
+#main > * {
+	color: #444444;
+}
+.about {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.title-wrapper {
+	width: 500px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: start;
+}
+.title-wrapper div {
+	flex-basis: 10em;
+	flex-grow: 2;
+}
+.title-wrapper .title {
+	font-size: 1.8em;
+	margin-bottom: 0.2em;
+}
+.title-wrapper .subtitle {
+	color: #a5a5a5;
+	margin-top: 0;
+}
+.more-projects-1 {
+	display: block;
+}
+.more-projects-2 {
+	display: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+	.more-projects-1 {
+		display: none;
+	}
+	.more-projects-2 {
+		display: block;
+	}
+	.about {
+		flex-flow: column wrap;
+	}
+	.title-wrapper {
+		width: auto;
+	}
 }
