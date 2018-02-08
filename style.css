@@ -7,6 +7,9 @@ html, body {
 p {
 	line-height:  1.48;
 }
+a {
+	text-decoration: none;
+}
 #skip {
 	position: absolute;
 	top: 0;
@@ -44,7 +47,6 @@ header {
 .nav-links li a {
 	color: #333333;
 	font-family: 'Roboto Condensed';
-	text-decoration: none;
 	text-transform: capitalize;
 }
 #main {
@@ -76,6 +78,7 @@ header {
 }
 .title-wrapper .subtitle {
 	color: #a5a5a5;
+	font-weight: 400;
 	margin-top: 0;
 }
 .more-projects-1 {
@@ -83,6 +86,57 @@ header {
 }
 .more-projects-2 {
 	display: none;
+}
+.copy {
+	width: 40%;
+	margin: 10em auto;
+	text-align: center;
+}
+.copy .copy-text {
+	color: #565656;
+	line-height: 1.4;
+	margin: 2em;
+}
+figure {
+	margin: 0;
+}
+.copy .contact-us {
+	border: 1px solid #333333;
+	border-radius: 4px;
+	color: #333333;
+	margin: 1em;
+	padding: 0.8em;
+}
+.projects .featured-projects {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+	"pic1 pic2 pic3" 
+	"pic4 pic5 pic6" ;
+	height: 1000px;
+}
+.featured-projects a:nth-child(1) {
+	grid-area: pic1;
+	align-self: end;
+}
+.featured-projects a:nth-child(2) {
+	grid-area: pic2;
+	align-self: center;
+}
+.featured-projects a:nth-child(3) {
+	grid-area: pic3;
+}
+.featured-projects a:nth-child(4) {
+	grid-area: pic4;
+	align-self: end;
+}
+.featured-projects a:nth-child(5) {
+	grid-area: pic5;
+	align-self: center;
+}
+.featured-projects a:nth-child(6) {
+	grid-area: pic6;
 }
 
 /* MEDIA QUERIES */
