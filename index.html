@@ -5,15 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css" media="none" onload="if(media!='all')media='all'">
     <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <script type="text/javascript" src="index.js"></script>
 	<title>Lab 1 - CS 179.2</title>
 </head>
 <body>
 	<a href="#main" id="skip">Skip to main content</a>
-	<header>
+	<header class="container">
 		<a href="#home" class="logo">Urban Forest</a>
 		<nav id="navigation" role="navigation">
-			<button aria-expanded="false">Menu</button>
-			<ul class="nav-links">
+			<button aria-expanded="false" id="toggle" onclick="show()">Menu</button>
+			<ul class="nav-links" id="nav-links">
 				<li><a href="#about">About</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact-us">Contact Us</a></li>
@@ -92,14 +93,19 @@
 	<footer>
 		<div class="container">
 			<div class="people">
-				<p>Senior partners</p>
-				<ul>
-					<li>Erica Romaguera</li>
-					<li>Caleigh Jerde</li>
-					<li>Lucas Schultz</li>
-					<li>Carole Marvin</li>
-					<li>Dorian Feeney</li>
-				</ul>
+				<div class="people-inner">
+					<p>Senior partners</p>
+					<ul>
+						<li>Erica Romaguera</li>
+						<li>Caleigh Jerde</li>
+						<li>Lucas Schultz</li>
+						<li>Carole Marvin</li>
+						<li>Dorian Feeney</li>
+					</ul>
+				</div>
+				<div class="image-right">
+					<img src="http://via.placeholder.com/180x200">
+				</div>
 			</div>
 			<div class="lower-footer">
 				<a href="#home" class="logo">Urban Forest</a>

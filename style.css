@@ -37,12 +37,13 @@ header {
 	width: 25%;
 }
 #navigation button {
-	display: none;
+	display: block;
 }
 .nav-links {
 	display: flex;
 	justify-content: space-around;
 	padding: 0;
+	display: none;
 }
 .nav-links li {
 	list-style-type: none;
@@ -115,12 +116,15 @@ figure {
 	margin: 5em auto;
 }
 .projects .featured-projects {
+	max-width: 960px;
 	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto;
-	grid-template-areas: 
+	/* grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto; */
+	grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+/* 	grid-template-areas: 
 	"pic1 pic2 pic3" 
 	"pic4 pic5 pic6" ;
+	height: 1000px; */
 	height: 1000px;
 	text-transform: uppercase;
 	color: #000;
@@ -130,31 +134,38 @@ figure {
 	color: #000;
 }
 .featured-projects a:nth-child(1) {
-	grid-area: pic1;
+	/* grid-area: pic1; */
 	align-self: end;
 }
 .featured-projects a:nth-child(2) {
-	grid-area: pic2;
+	/* grid-area: pic2; */
 	align-self: center;
 }
 .featured-projects a:nth-child(3) {
-	grid-area: pic3;
+	/* grid-area: pic3; */
 }
 .featured-projects a:nth-child(4) {
-	grid-area: pic4;
+	/* grid-area: pic4; */
 	align-self: end;
 }
 .featured-projects a:nth-child(5) {
-	grid-area: pic5;
+	/* grid-area: pic5; */
 	align-self: center;
 }
 .featured-projects a:nth-child(6) {
-	grid-area: pic6;
+	/* grid-area: pic6; */
 }
 footer {
+	position: relative;
 	background-color: #eeeeee;
 	margin: 3em auto 0;
 	padding: 2em 0 1em;
+}
+.people {
+	/* display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between; */
+	margin-right: 3em;
 }
 .people p {
 	font-size: 1.2em;
@@ -168,6 +179,11 @@ footer {
 	color: #565656;
 	list-style-type: none;
 	margin-bottom: 5px;
+}
+.image-right {
+	position: absolute;
+	bottom: 50%;
+	right: 16%;
 }
 .lower-footer {
 	display: flex;
@@ -184,15 +200,13 @@ footer {
 	justify-content: space-evenly;
 	align-items: center;
 }
-.social-links li {
-}
 .social-links a img {
 	width: 32px;
 	padding: 0 0.5em;
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
 	* {
 		font-size: 97%;
 	}
@@ -220,37 +234,10 @@ footer {
 		width: auto;
 	}
 	.projects .featured-projects {
-		display: grid;
-		grid-template-columns: auto auto;
-		grid-template-rows: auto auto auto;
-		grid-template-areas: 
-		"pic1 pic2"
-		"pic3 pic4" 
-		"pic5 pic6";
-		text-transform: uppercase;
-		color: #000;
 		height: auto;
-		text-align: center;
 	}
-	.featured-projects a:visited {
-		color: #000;
-	}
-	.featured-projects a:nth-child(1) {
-		grid-area: pic1;
-	}
-	.featured-projects a:nth-child(2) {
-		grid-area: pic2;
-	}
-	.featured-projects a:nth-child(3) {
-		grid-area: pic3;
-	}
-	.featured-projects a:nth-child(4) {
-		grid-area: pic4;
-	}
-	.featured-projects a:nth-child(5) {
-		grid-area: pic5;
-	}
-	.featured-projects a:nth-child(6) {
-		grid-area: pic6;
-	}
+}
+.open {
+	display: block;
+	text-align: center;
 }
